@@ -15,11 +15,11 @@
 -->
 <!DOCTYPE html>
 
-@if (\Request::is('rtl'))
+<!-- @if (\Request::is('rtl')) -->
   <html dir="rtl" lang="ar">
-@else
+<!-- @else
   <html lang="en" >
-@endif
+@endif -->
 
 <head>
   <meta charset="utf-8" />
@@ -46,8 +46,8 @@
   <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
 </head>
 
-<body class="g-sidenav-show  bg-gray-100 {{ (\Request::is('rtl') ? 'rtl' : (Request::is('virtual-reality') ? 'virtual-reality' : '')) }} ">
-  @auth
+<body class="g-sidenav-show  bg-gray-100 rtl">
+    @auth
     @yield('auth')
   @endauth
   @guest
