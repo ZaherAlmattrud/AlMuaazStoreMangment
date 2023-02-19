@@ -21,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/tttt',function(){
+
+         return view('tttt');
+});
 
 Route::group(['middleware' => 'auth'], function () {
 
