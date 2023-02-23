@@ -12,6 +12,11 @@ class testc extends Controller
     {
 
         $products = [];
+        $itess = new stdClass();
+        $itess->id = 0;
+        $itess->name = "teccccts";
+        $products[] = $itess;
+
         $ite = new stdClass();
         $ite->id = 1;
         $ite->name = "tets";
@@ -28,6 +33,6 @@ class testc extends Controller
 
     public function test2(){
 
-        
+
     }
 }

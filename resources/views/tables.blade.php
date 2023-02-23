@@ -26,13 +26,15 @@
                     <tbody>
                         <tr>
                             <td>
-                                <select name="city_id" id="city">
+                                <input type="text" id="search" list="products" placeholder="أبحث عن منتج " />
+                                <datalist id="products">
                                     @foreach ($products as $product)
-                                        <option value="{{ $product->id }}">
+                                        <option>
                                             {{ $product->name }}
                                         </option>
                                     @endforeach
-                                </select>
+                                </datalist>
+
                             </td>
                             <td><input type="text" id="count" name="count"></td>
                             <td>200,000</td>
@@ -54,6 +56,18 @@
 @endsection
 @push('dashboard')
     <script>
+        $('#search').change(function(e) {
+
+
+
+
+
+
+            $("#products").append(new Option(e.target.value, "id"));
+
+
+
+        });
 
 
 
